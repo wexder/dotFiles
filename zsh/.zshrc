@@ -58,6 +58,9 @@ alias df='df -h'
 #continue download
 alias wget="wget -c"
 
+# tmux
+alias ta="tmux attach -t"
+alias ts="tmux new-sessions -s"
 
 #create a file called .zshrc-personal and put all your personal aliases
 #in there. They will not be overwritten by skel.
