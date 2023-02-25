@@ -31,10 +31,6 @@ ZSH_THEME="spaceship"
 
 export EDITOR='nvim'
 
-
-####   ARCOLINUX SETTINGS   ####
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 setopt GLOB_DOTS
 
 # If not running interactively, don't do anything
