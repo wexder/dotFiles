@@ -5,27 +5,35 @@
     "margin-bottom": 0,
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["sway/workspaces", "cpu", "memory", "custom/weather"],
-    "modules-center": ["sway/window"],
+    "modules-left": ["wlr/workspaces","sway/workspaces", "cpu", "memory", "custom/weather"],
+    "modules-center": ["sway/window", "hyprland/window"],
     "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
     "sway/window": {
     	"format": "{title}",
     	"max-length": 50
     },
+    "hyprland/window": {
+        "format": " {} ",
+        "separate-outputs": true
+    },
     "sway/workspaces": {
-	"disable-scroll": true,
-   	"all-outputs": true,
-   	"format": "{name}: {icon}",
-   	"format-icons": {
-       		"3": "",
-       		"1": "",
-       		"10": "",
-       		"5": "",
-       		"9": "",
-       		"urgent": "",
-       		"focused": "",
-       		"default": ""
-   	}
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "{name}: {icon}",
+        "format-icons": {
+                "3": "",
+                "1": "",
+                "10": "",
+                "5": "",
+                "9": "",
+                "urgent": "",
+                "focused": "",
+                "default": ""
+        }
+    },
+    "wlr/workspaces": {
+      "format": "{name}",
+      "on-click": "activate"
     },
     "sway/mode": {
  	"format": " {}",

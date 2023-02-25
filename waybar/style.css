@@ -4,7 +4,7 @@
   font-size: 17px;
 }
 
-#window.empty {
+window#window.empty {
   padding-left: 0px; 
   padding-right: 0px;
 }
@@ -54,7 +54,7 @@ window#waybar.hidden {
   color: #ffffff;
 }
 
-#window.empty {
+window#window.empty {
   padding-left: 0px; 
   padding-right: 0px;
 }
@@ -100,6 +100,8 @@ window#waybar.hidden {
   margin: 0 4px;
   border-radius: 7.8px;
   background-color: #1f2530;
+  padding-left: 0px; 
+  padding-right: 0px;
 }
 
 #cpu {
@@ -318,4 +320,9 @@ label:focus {
 
 #keyboard-state > label.locked {
   background: rgba(0, 0, 0, 0.2);
+}
+
+window#window.empty {
+  padding-left: 0px; 
+  padding-right: 0px;
 }
