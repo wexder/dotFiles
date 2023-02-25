@@ -20,10 +20,10 @@ font:
 
   # Italic font face
   italic:
-    family: hack
+    family: FiraCode Nerd Font Mono
     style: Italic
   bold_italic:
-    family: monospace
+    family: FiraCode Nerd Font Mono
     style: Bold Italic
 
   # Point size
