@@ -1,6 +1,6 @@
 export LANG=en_US.UTF-8
 
-source /usr/share/zsh/share/antigen.zsh
+source ~/.config/antigen/antigen.zsh
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
