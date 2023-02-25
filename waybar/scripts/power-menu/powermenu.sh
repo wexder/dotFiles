@@ -19,23 +19,14 @@ no='תּ No'
 
 # Rofi CMD
 rofi_cmd() {
-	rofi -dmenu \
-		-p "$host" \
-		-mesg "Uptime: $uptime" \
-		-theme ${dir}/${theme}.rasi
+	wofi -dmenu
 }
 
 # Confirmation CMD
 confirm_cmd() {
-	rofi -theme-str 'window {location: center; anchor: center; fullscreen: false; width: 250px;}' \
-		-theme-str 'mainbox {children: [ "message", "listview" ];}' \
-		-theme-str 'listview {columns: 2; lines: 1;}' \
-		-theme-str 'element-text {horizontal-align: 0.5;}' \
-		-theme-str 'textbox {horizontal-align: 0.5;}' \
-		-dmenu \
+	wofi -dmenu \
 		-p 'Confirmation' \
-		-mesg 'Are you Sure?' \
-		-theme ${dir}/${theme}.rasi
+		-mesg 'Are you Sure?'
 }
 
 # Ask for confirmation
@@ -70,7 +61,7 @@ run_cmd() {
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 			elif [[ "$DESKTOP_SESSION" == 'Hyprland' ]]; then
-        hyprctl dispatch exit 1
+                hyprctl dispatch exit 1
 			fi
 		fi
 	else
