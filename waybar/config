@@ -70,7 +70,7 @@
         "format-wifi": "直 {signalStrength}%",
         "format-ethernet": " wired",
         "format-disconnected": "睊",
-        "on-click": "bash ~/.config/waybar/scripts/rofi-wifi-menu.sh",
+        "on-click": "wofi-wifi-menu",
         "format-disconnected": "Disconnected  ",
     },
 
