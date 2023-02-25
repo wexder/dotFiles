@@ -5,24 +5,21 @@ source /usr/share/zsh/share/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
-antigen bundle <<EOBUNDLES
-    # Bundles from the default repo (robbyrussell's oh-my-zsh)
-    git
-    tmux
-    docker
-    docker-compose
-    kubectl
-    ssh-agent
+antigen bundle git
+antigen bundle tmux
+antigen bundle docker
+antigen bundle docker-compose
+antigen bundle kubectl
+antigen bundle ssh-agent
 
-    # Syntax highlighting bundle.
-    zsh-users/zsh-syntax-highlighting
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
 
-    # Fish-like auto suggestions
-    zsh-users/zsh-autosuggestions
+# Fish-like auto suggestions
+antigen bundle zsh-users/zsh-autosuggestions
 
-    # Extra zsh completions
-    zsh-users/zsh-completions
-EOBUNDLES
+# Extra zsh completions
+antigen bundle zsh-users/zsh-completions
 
 # Tell Antigen that you're done.
 antigen apply
