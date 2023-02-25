@@ -43,11 +43,11 @@
         "spacing": 10
     },
     "clock": {
-        "format": "<span color='#bf616a'> </span>{:%a %b %d :%I:%M %p}",
+        "format": "<span color='#bf616a'> </span>{:%a %b %d %I:%M %p}",
         "format-alt": "<span color='#bf616a'> </span>{:%I:%M %p}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "timezone": "Europe/Prague"
     },
-
     "cpu": {
       "interval": 10,
       "format": " {}%",
