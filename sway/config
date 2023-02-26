@@ -26,6 +26,7 @@ exec kdeconnect-indicator
 exec mako
 exec kanshi
 #exec waybar
+exec slack --enable-features=WebRTCPipeWireCapturer
 
 ### Output configuration
 #
