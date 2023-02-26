@@ -7,7 +7,7 @@
     "spacing": 5, // Gaps between modules (4px)
     "modules-left": ["wlr/workspaces","sway/workspaces", "cpu", "memory", "custom/weather"],
     "modules-center": ["sway/window", "hyprland/window"],
-    "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
+    "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "hyprland/language","battery", "clock", "custom/power-menu"],
     "sway/window": {
     	"format": "{title}",
     	"max-length": 50
@@ -38,6 +38,12 @@
     "sway/mode": {
  	"format": " {}",
 	"max-length": 50
+    },
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "US",
+        "format-cz": "CZ",
+        "format-czech": "CZ",
     },
     "tray": {
         "spacing": 10

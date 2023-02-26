@@ -68,6 +68,7 @@ window#window.empty {
 #backlight,
 #network,
 #pulseaudio,
+#language,
 #custom-media,
 #tray,
 #mode,
@@ -292,8 +293,8 @@ label:focus {
 }
 
 #language {
-  background: #00b093;
-  color: #740864;
+  background-color: #1f2530;
+  color: #c8d2e0;
   padding: 0 5px;
   margin: 0 5px;
   min-width: 16px;
