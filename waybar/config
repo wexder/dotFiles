@@ -8,7 +8,7 @@
     "spacing": 5, // Gaps between modules (4px)
     "modules-left": ["wlr/workspaces","sway/workspaces", "cpu", "memory", "custom/weather"],
     "modules-center": ["sway/window", "hyprland/window"],
-    "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "hyprland/language","battery", "clock", "custom/power-menu"],
+    "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "hyprland/language", "sway/language","battery", "clock", "custom/power-menu"],
     "sway/window": {
     	"format": "{title}",
     	"max-length": 50
@@ -35,6 +35,9 @@
     "wlr/workspaces": {
       "format": "{name}",
       "on-click": "activate"
+    },
+    "sway/language": {
+        "format": "{short} {variant}",
     },
     "sway/mode": {
  	"format": " {}",
