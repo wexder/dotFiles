@@ -140,7 +140,14 @@ exec swayidle -w \
     # Media player controls
     bindsym XF86AudioPlay exec playerctl play-pause
     bindsym XF86AudioNext exec playerctl next
+    # Lenovo have phone instead of media keys
+    bindsym XF86Phone exec playerctl next
     bindsym XF86AudioPrev exec playerctl previous
+    # Lenovo have phone instead of media keys
+    bindsym XF86PickupPhone exec playerctl previous
+
+    bindsym XF86MonBrightnessUp exec brightnessctl set +2000
+    bindsym XF86MonBrightnessDown exec brightnessctl set 2000-
     
 #
 # Moving around:
