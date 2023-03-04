@@ -263,29 +263,10 @@ bindsym $mod+r mode "resize"
 #
 # Read `man 5 sway-bar` for more information about this section.
 bar {
-  swaybar_command waybar
+  swaybar_command waybar -c ~/.config/waybar/sway.json
 }
 
-# bar {
-#     mode hide
-#     hidden_state hide
-#     modifier $mod
-#     font $uifont
-# 
-#     # When the status_command prints a new line to stdout, swaybar updates.
-#     # The default just shows the current date and time.
-#     status_command while date +'%-d.%-m.%Y. %H:%M:%S %p'; do sleep 1; done
-# 
-#     colors {
-# 	statusline #ffffff
-# 	background #121212
-# 	#background #00000000
-# 	focused_workspace #121212 #18b218 #232627
-# 	active_workspace #121212 $highlight #232627
-# 	inactive_workspace #121212 #7f8c8d #232627
-#     }
-# }
-#
+
 # Titlebars
 #
 default_border pixel
