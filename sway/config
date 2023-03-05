@@ -18,7 +18,7 @@ set $prompt #18b218
 # set $menu bemenu-run --fn $uifont -b -p "▶" --tf "$prompt" --hf "$highlight" --sf "$highlight" --scf "$highlight" | xargs swaymsg exec
 set $menu wofi --show drun
 set $wallpaper /usr/share/backgrounds/favourite/background08.jpg
-set $lock swaylock -f -i $wallpaper -s fill
+set $lock swaylock -f -i ~/Pictures/wallpapers/mountains-on-mars.png -s fill
 ### Needed for xdg-desktop-portal-kde
 exec dbus-update-activation-environment --systemd --all
 exec /usr/lib/xdg-desktop-portal --replace
@@ -26,6 +26,10 @@ exec kdeconnect-indicator
 exec mako
 exec kanshi
 exec slack --enable-features=WebRTCPipeWireCapturer
+
+## cliphist
+exec wl-paste --type text --watch cliphist store #Stores only text data
+exec wl-paste --type image --watch cliphist store #Stores only image data
 
 ### Output configuration
 #
@@ -95,9 +99,15 @@ exec swayidle -w \
     # reload the configuration file
     bindsym $mod+Shift+c reload
 
+    # clipboard history
+    bindsym $mod+Shift+v cliphist list | wofi -dmenu | cliphist decode | wl-copy
+
+    # Random wallpaper
+    bindsym Mod1+N exec setrandom ~/Pictures/wallpapers
+
     # exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
-    bindsym Control+Mod1+Backspace exec swaymsg exit
+    #bindsym Control+Mod1+Backspace exec swaymsg exit
     
     for_window [window_role="pop-up"] floating enable
     for_window [window_role="bubble"] floating enable
@@ -217,7 +227,7 @@ exec swayidle -w \
 
     # Make the current focus fullscreen
     bindsym F11 fullscreen
-    bindsym $mod+f fullscreen
+    bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+space floating toggle
