@@ -26,10 +26,12 @@ exec kdeconnect-indicator
 exec mako
 exec kanshi
 exec slack --enable-features=WebRTCPipeWireCapturer
+exec setrandom ~/Pictures/wallpapers
 
 ## cliphist
 exec wl-paste --type text --watch cliphist store #Stores only text data
 exec wl-paste --type image --watch cliphist store #Stores only image data
+exec waybar -c /home/wexder/.config/waybar/sway.json
 
 ### Output configuration
 #
@@ -75,6 +77,11 @@ exec swayidle -w \
         xkb_layout hr(us)
     }
 
+input * {
+    xkb_layout "us,cz"
+    xkb_options "grp:win_space_toggle"
+}
+
 ### Key bindings
 #
 # Basics:
@@ -100,7 +107,7 @@ exec swayidle -w \
     bindsym $mod+Shift+c reload
 
     # clipboard history
-    bindsym $mod+Shift+v cliphist list | wofi -dmenu | cliphist decode | wl-copy
+    bindsym $mod+Shift+V exec cliphist list | wofi -dmenu | cliphist decode | wl-copy
 
     # Random wallpaper
     bindsym Mod1+N exec setrandom ~/Pictures/wallpapers
@@ -230,10 +237,10 @@ exec swayidle -w \
     bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+space floating toggle
+    bindsym $mod+Space+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    bindsym $mod+Shift+space focus mode_toggle
+    bindsym $mod+Mod1+space focus mode_toggle
 
     # move focus to the parent container
     bindsym $mod+a focus parent
@@ -268,13 +275,6 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
-#
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
-bar {
-  swaybar_command waybar -c ~/.config/waybar/sway.json
-}
 
 
 # Titlebars
@@ -291,6 +291,7 @@ hide_edge_borders smart
     client.unfocused        #333333 #222222 #888888 #292d2e #222222
     client.urgent           #2f343a #900000 #ffffff #900000 #900000 
     gaps inner 10
+    # smart_gaps on
 
 font pango:monospace 0
 titlebar_border_thickness 2
