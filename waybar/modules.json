@@ -10,17 +10,7 @@
     "sway/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{name}: {icon}",
-        "format-icons": {
-                "3": "",
-                "1": "",
-                "10": "",
-                "5": "",
-                "9": "",
-                "urgent": "",
-                "focused": "",
-                "default": ""
-        }
+        "format": "{name}",
     },
     "wlr/workspaces": {
       "format": "{name}",
