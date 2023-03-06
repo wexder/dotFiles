@@ -2,3 +2,10 @@
 profile {
 	output eDP-1 enable scale 1.13
 }
+
+profile {
+	output eDP-1 enable scale 1.13 position 5600,1554
+	output DP-4 enable position 2160,1554
+	output DP-6 enable position 0,0 transform 90
+}
+
