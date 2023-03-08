@@ -31,7 +31,18 @@ exec setrandom -m scale ~/Pictures/wallpapers
 ## cliphist
 exec wl-paste --type text --watch cliphist store #Stores only text data
 exec wl-paste --type image --watch cliphist store #Stores only image data
+
+# waybar
 exec waybar -c /home/wexder/.config/waybar/sway.json
+
+# NetworkManager
+exec NetworkManager
+
+# audio
+exec playerctld daemon
+
+# passwords
+exec bitwarden
 
 ### Output configuration
 #
