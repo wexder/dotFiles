@@ -6,9 +6,9 @@
     "margin-bottom": 0,
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["sway/workspaces", "cpu", "memory", "custom/weather", "sway/mode"],
+    "modules-left": ["sway/workspaces", "cpu", "memory", "custom/weather", "sway/mode", "battery"],
     "modules-center": ["sway/window"],
-    "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "sway/language","battery", "clock", "custom/power-menu"],
+    "modules-right": ["custom/spotify","tray", "backlight", "pulseaudio", "network", "sway/language", "clock", "custom/power-menu"],
 	"include": [
 		"~/.config/waybar/modules.json",
 	],
