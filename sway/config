@@ -152,7 +152,7 @@ input * {
     bindsym $mod+F8 exec pkill kmousetool || kmousetool
     bindsym $mod+shift+F4 exec firefox --private-window
     bindsym Print exec grim -g "$(slurp)" - | swappy -f -
-    bindsym $mod+Print exec grim - | swappy -f -
+    bindsym Control+$modPrint exec grim - | swappy -f -
     bindsym $mod+tab workspace back_and_forth
     
 #
