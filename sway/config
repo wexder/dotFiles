@@ -149,7 +149,7 @@ input * {
     bindsym $mod+F8 exec pkill kmousetool || kmousetool
     bindsym $mod+shift+F4 exec firefox --private-window
     bindsym Print exec grim -g "$(slurp)" - | swappy -f -
-    bindsym Control+$modPrint exec grim - | swappy -f -
+    bindsym Control+Print exec grim - | swappy -f -
     bindsym $mod+tab workspace back_and_forth
     
 #
@@ -243,7 +243,7 @@ input * {
     bindsym $mod+Shift+f fullscreen
 
     # Toggle the current focus between tiling and floating mode
-    bindsym $mod+Space+space floating toggle
+    bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+Mod1+space focus mode_toggle
