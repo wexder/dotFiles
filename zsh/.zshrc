@@ -11,6 +11,7 @@ antigen bundle docker
 antigen bundle docker-compose
 antigen bundle kubectl
 antigen bundle ssh-agent
+antigen bundle git@github.com:spwhitt/nix-zsh-completions.git
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
@@ -39,9 +40,20 @@ if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
 
+if [ -d "$HOME/.cargo" ] ;
+  then PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
+
+if [ -d "$HOME/.local/bin" ] ; then
+  export GOPATH=$HOME/go
+  export PATH=$GOPATH/bin:$PATH
+fi
+
+
 
 #list
 alias ls='ls --color=auto'
