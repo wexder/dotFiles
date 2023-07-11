@@ -38,8 +38,17 @@ exec waybar -c /home/wexder/.config/waybar/sway.json
 # audio
 exec playerctld daemon
 
+# browser
+exec firefox
+
+# music
+exec tidal-hifi
+
 # passwords
 exec bitwarden
+
+# steam
+exec steam-runtime
 
 ### Output configuration
 #
@@ -96,7 +105,8 @@ input * {
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+q kill
+    # bindsym $mod+q kill
+    bindsym $mod+q exec ~/.config/sway/kill.sh
 
     # start your launcher
     bindsym $mod+shift+d exec $menu
@@ -135,6 +145,9 @@ input * {
     #for_window [app_id="mpv"] layout tabbed
     for_window [class="Wine"] floating enable
     for_window [app_id="lutris"] floating enable
+
+    for_window [class="notion-app-enhanced"] move to scratchpad
+    for_window [title="^TIDAL$"] move to scratchpad
     
     bindsym $mod+F12 exec shutdown now
     bindsym $mod+Control+L exec $lock
@@ -292,11 +305,11 @@ hide_edge_borders smart
 # Colors #93cee9
 #
 # class                     border  backgr. text  indicator child_border
-    client.focused          #eb4d4b #285577 #ffffff $highlight $highlight
-    client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
-    client.unfocused        #333333 #222222 #888888 #292d2e #222222
-    client.urgent           #2f343a #900000 #ffffff #900000 #900000 
-    gaps inner 10
+client.focused          #eb4d4b #285577 #ffffff $highlight $highlight
+client.focused_inactive #333333 #5f676a #ffffff #484e50 #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e #222222
+client.urgent           #2f343a #900000 #ffffff #900000 #900000 
+gaps inner 10
     # smart_gaps on
 
 font pango:monospace 0
