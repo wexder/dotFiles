@@ -22,6 +22,8 @@ antigen bundle zsh-users/zsh-autosuggestions
 # Extra zsh completions
 antigen bundle zsh-users/zsh-completions
 
+antigen bundle chisui/zsh-nix-shell
+
 # Tell Antigen that you're done.
 antigen apply
 
