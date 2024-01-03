@@ -3,7 +3,15 @@
 # Copy this to ~/.config/sway/config and edit it to your liking.
 #
 # Read `man 5 sway` for a complete reference.
+include /etc/sway/config.d/*
+set $gnome-schema org.gnome.desktop.interface
 
+exec_always {
+    gsettings set $gnome-schema gtk-theme 'Catppuccin-Mocha-Standard-Pink-Dark'
+    gsettings set $gnome-schema icon-theme 'Catppuccin-Mocha-Standard-Pink-Dark'
+    gsettings set $gnome-schema cursor-theme 'Catppuccin-Mocha-Standard-Pink-Dark'
+    gsettings set $gnome-schema font-name 'Catppuccin-Mocha-Standard-Pink-Dark'
+}
 ### Variables
 #
 # Logo key. Use Mod1 for Alt.
@@ -49,6 +57,9 @@ exec bitwarden
 
 # steam
 exec steam-runtime
+
+# vnc
+exec wayvnc
 
 ### Output configuration
 #
@@ -300,7 +311,10 @@ bindsym $mod+r mode "resize"
 #
 default_border pixel
 default_floating_border pixel
-hide_edge_borders smart
+hide_edge_borders --i3 smart
+titlebar_border_thickness 1
+titlebar_padding 1
+font monospace 0.1
 #
 # Colors #93cee9
 #
@@ -312,7 +326,3 @@ client.urgent           #2f343a #900000 #ffffff #900000 #900000
 gaps inner 10
     # smart_gaps on
 
-font pango:monospace 0
-titlebar_border_thickness 2
-titlebar_padding 2
-include /etc/sway/config.d/*
